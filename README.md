@@ -1,5 +1,9 @@
 # WEBSITE TÌM HIỂU & ĐĂNG KÝ SỰ KIỆN
 
+## thông tin sinh viên
+* Tên: Châu Tiến Đạt
+* MSSV: 24210501011
+* Lớp: 242101TH001
 ## Giới thiệu
 
 Đây là dự án xây dựng một website giới thiệu và đăng ký tham gia sự kiện bằng **HTML, CSS và JavaScript**.
@@ -138,7 +142,7 @@ Có thể mở rộng:
 
 ## Tác giả
 
-* Sinh viên thực hành HTML, CSS, JavaScript
+* Châu Tiến Đạt: Sinh viên thực hành HTML, CSS, JavaScript
 * Mục tiêu: xây dựng website sự kiện hoàn chỉnh
 
 ---
@@ -150,4 +154,6 @@ Có thể mở rộng:
 * Tối ưu trải nghiệm người dùng (UX/UI)
 
 ---
+link demon: https://github.com/chauda2006/test-github/edit/main/README.md
+ảnh demo: <img width="1908" height="1036" alt="image" src="https://github.com/user-attachments/assets/e7ea77e0-4559-4c4e-be83-5a56e8c70a2a" />
 
