@@ -1,0 +1,222 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* BODY */
+body{
+    font-family:sans-serif;
+    padding-top:110px; /* 🔥 FIX DÍNH NAVBAR (QUAN TRỌNG) */
+}
+
+/* VIDEO BACKGROUND */
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+    z-index:-3;
+}
+
+/* LỚP TỐI */
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    z-index:-2;
+}
+
+/* STARS */
+.stars{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:200%;
+    background:url("https://www.transparenttextures.com/patterns/stardust.png");
+    z-index:-1;
+}
+
+.stars1{
+    animation: moveStars 50s linear infinite, twinkle 2s infinite alternate;
+}
+.stars2{
+    opacity:.5;
+    animation: moveStars 100s linear infinite, twinkle 3s infinite alternate;
+}
+.stars3{
+    opacity:.3;
+    animation: moveStars 150s linear infinite, twinkle 4s infinite alternate;
+}
+
+@keyframes moveStars{
+    from{ transform:translateY(0); }
+    to{ transform:translateY(-2000px); }
+}
+
+@keyframes twinkle{
+    from{ opacity:.3; }
+    to{ opacity:1; }
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#073c52a5;
+    display:flex;
+    align-items:center;
+    padding:10px 20px;
+    z-index:1000;
+
+    box-shadow:
+        0 0 15px #00d4ff,
+        0 0 30px #00d4ff,
+        0 0 60px #00d4ff;
+}
+
+/* LOGO */
+.logo{
+    position:fixed;
+    top:10px; /* 🔥 chỉnh lại cho gọn */
+    left:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+    z-index:1001;
+}
+
+.logo img{
+    width:70px;
+    filter:drop-shadow(0 0 10px #00d4ff);
+}
+
+.logo-text{
+    color:#fff;
+    font-size:13px;
+    margin-top:3px;
+    text-shadow:0 0 5px #00d4ff, 0 0 10px #00d4ff;
+}
+
+/* menu*/
+nav{
+    margin-left:auto;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a{
+    font-family: 'Poppins', sans-serif; /* 👈 thêm dòng này */
+    color: white;
+    font-size: 13px; /* 👈 tăng size cho đẹp */
+    text-shadow: 0 0 5px #dce5e78d,
+                 0 0 10px #ffffffbc,
+                 0 0 20px #f0f3f4a1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu li a:hover{
+    color:#00d4ff;
+    text-shadow:0 0 5px #00d4ff,
+                0 0 10px #00d4ff,
+                0 0 20px #00d4ff;
+}
+
+/* TITLE */
+.title{
+    text-align: center;
+    color: #fafafa;
+    font-size: 32px;
+
+    text-shadow:
+        0 0 5px #00eaff,
+        0 0 10px #00eaff,
+        0 0 20px #00eaff;
+
+    margin-bottom: 30px;
+}
+
+/* KHUNG TABLE */
+.table-container{
+    width: 60%;
+    margin: 120px auto 40px; /* 🔥 tránh navbar */
+    padding: 20px;
+
+    background: rgba(255,255,255,0.08); /* 🔥 trong suốt đẹp */
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,0.3),
+        0 0 30px rgba(0,255,255,0.2);
+}
+
+/* TABLE */
+#tableList{
+    width:100%;
+    border-collapse:collapse;
+    color:white;
+}
+
+#tableList th{
+    background: rgba(0,200,255,0.4);
+    padding:10px;
+    font-size:14px;
+
+    text-shadow:
+        0 0 5px #00eaff,
+        0 0 10px #00eaff,
+        0 0 20px #00eaff;
+}
+
+#tableList td{
+    padding:8px;
+    font-size:13px;
+    text-align:center;
+
+    text-shadow:
+        0 0 3px #00eaff,
+        0 0 6px #00eaff;
+}
+
+#tableList tr:hover{
+    background: rgba(0,255,255,0.15);
+}
+
+/* BUTTON */
+button{
+    border:none;
+    padding:6px 12px;
+    border-radius:6px;
+    cursor:pointer;
+
+    background:#00c853;
+    color:white;
+    font-size:12px;
+}
+
+button:hover{
+    box-shadow:0 0 10px #00ffcc;
+}
+
+.btn-delete-all{
+    margin-top:10px;
+    background:red;
+}

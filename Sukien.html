@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự Kiện</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<body>
+            <!-- LOGO -->
+<header class="navbar">
+    <a href="index.html" class="logo">
+    <img src="imagesjpg/logo.png" alt="Logo">
+    <div class="logo-text">Trang chủ</div>
+    </a>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="active"><b>Trang chủ</b></a></li>
+            <li><a href="index.html#gioithieu"><b>Giới thiệu</b></a></li>
+            <li><a href="Sukien.html"><b>Sự kiện</b></a></li>
+            <li><a href="Quyenloi.html"><b>Quyền lợi</b></a></li>
+            <li><a href="Diengia.html"><b>Diễn giả</b></a></li>
+            <li><a href="Dangky.html"><b>Đăng ký</b></a></li>
+            <li><a href="Danhsachdangky.html"><b>Danh sách Đăng ký</b></a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+    <!-- Video nền -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="imagesmp4/nen01.mp4" type="video/mp4">
+    </video>
+
+    <!-- Các lớp bong bóng  -->
+    <div class="stars stars1"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+
+    
+<header>
+        <h1>TECH OCEAN 2026</h1>
+        <p>Triển lãm Công nghệ & Đại dương</p>
+        <p>Hội trường A21 BDU.CM</p>
+</header>
+
+    <section class="container">
+
+        <div class="card">
+            <h2>AI và Tương lai Đại dương</h2>
+            <p>🕒 08:00 - 09:00 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('AI và Tương lai Đại dương')">
+                Xem chi tiết
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Robot Khám phá Biển Sâu</h2>
+            <p>🕒 09:15 - 10:15 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('Robot Khám phá Biển Sâu')">
+                Xem chi tiết
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Internet Vạn Vật Dưới Nước</h2>
+            <p>🕒 10:30 - 11:30 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('Internet Vạn Vật Dưới Nước')">
+                Xem chi tiết
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Năng lượng Sóng Biển</h2>
+            <p>🕒 13:00 - 14:00 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('Năng lượng Sóng Biển')">
+                Xem chi tiết
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>VR Khám phá Đại dương</h2>
+            <p>🕒 14:15 - 15:15 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('VR Khám phá Đại dương')">
+                Xem chi tiết
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Blockchain và Bảo tồn Biển</h2>
+            <p>🕒 15:30 - 16:30 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('Blockchain và Bảo tồn Biển')">
+                Xem chi tiết
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Thành phố Thông minh Ven Biển</h2>
+            <p>🕒 17:00 - 18:00 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('Thành phố Thông minh Ven Biển')">
+                Xem chi tiết
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Tương lai Công nghệ Xanh</h2>
+            <p>🕒 18:15 - 19:15 | 20/06/2026</p>
+            <p>📍 Hội trường A21</p>
+            <button onclick="showDetail('Tương lai Công nghệ Xanh')">
+                Xem chi tiết
+            </button>
+        </div>
+
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="title"></h2>
+            <p>Diễn ra tại Hội trường A21, chuỗi sự kiện là nơi hội tụ của đổi mới sáng tạo và công nghệ hiện đại trong hành trình khám phá, bảo tồn đại dương. Thông qua các hoạt động triển lãm, hội thảo chuyên đề và trải nghiệm tương tác, người tham dự sẽ được tiếp cận những thành tựu công nghệ tiên tiến đang góp phần giải quyết các thách thức môi trường biển toàn cầu. Sự kiện hứa hẹn mang đến không gian học thuật và sáng tạo, thúc đẩy tinh thần nghiên cứu khoa học, đồng thời lan tỏa thông điệp về trách nhiệm bảo vệ hệ sinh thái biển cho các thế hệ tương lai.</p>
+            <button onclick="closeModal()">Đóng</button>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
+    

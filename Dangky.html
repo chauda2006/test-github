@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tại đây</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <img src="imagesjpg/logo.png" alt="Logo">
+        <div class="logo-text">Trang chủ</div>
+    </a>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="active"><b>Trang chủ</b></a></li>
+            <li><a href="index.html#gioithieu"><b>Giới thiệu</b></a></li>
+            <li><a href="Sukien.html"><b>Sự kiện</b></a></li>
+            <li><a href="Quyenloi.html"><b>Quyền lợi</b></a></li>
+            <li><a href="Diengia.html"><b>Diễn giả</b></a></li>
+            <li><a href="Dangky.html"><b>Đăng ký</b></a></li>
+            <li><a href="Danhsachdangky.html"><b>Danh sách Đăng ký</b></a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HIỆU ỨNG SAO -->
+<div class="stars stars1"></div>
+<div class="stars stars2"></div>
+<div class="stars stars3"></div>
+
+<!-- VIDEO NỀN -->
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="imagesmp4/nen04.mp4" type="video/mp4">
+</video>
+
+<!-- FORM -->
+<div class="event-form">
+
+    <div class="container">
+        <h2 class="title">ĐĂNG KÝ THAM GIA SỰ KIỆN</h2>
+
+        <div class="card p-4">
+            <form id="eventForm">
+
+                <div class="mb-3">
+                    <label>Họ và tên</label>
+                    <input type="text" class="form-control" id="name">
+                    <div class="error" id="nameError"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="email">
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Số điện thoại</label>
+                    <input type="text" class="form-control" id="phone">
+                    <div class="error" id="phoneError"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Lớp</label>
+                    <input type="text" class="form-control" id="class">
+                    <div class="error" id="classError"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Chọn sự kiện</label>
+                    <select class="form-control" id="event">
+                        <option value="">-- Chọn sự kiện --</option>
+                        <option>AI và Tương lai Đại dương</option>
+                        <option>Robot Khám phá Biển Sâu</option>
+                        <option>Internet Vạn Vật Dưới Nước</option>
+                        <option>Năng lượng Sóng Biển</option>
+                        <option>VR Khám phá Đại dương</option>
+                        <option>Blockchain và Bảo tồn Biển</option>
+                        <option>Thành phố Thông minh Ven Biển</option>
+                        <option>Tương lai Công nghệ Xanh</option>
+                    </select>
+                    <div class="error" id="eventError"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Ghi chú</label>
+                    <textarea class="form-control" id="note"
+                        placeholder="Nhập ghi chú nếu có"></textarea>
+                </div>
+
+                <div id="successMessage" class="success-message">
+                    🎉 Đăng ký thành công!
+                </div>
+
+                <button type="submit" class="btn btn-info w-100 mt-3">
+                    Đăng ký
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/Dangky.js"></script>
+
+</body>
+</html>

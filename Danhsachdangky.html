@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách đăng ký</title>
+    <link rel="stylesheet" href="css/Danhsachdangky.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<body>
+            <!-- LOGO -->
+<header class="navbar">
+    <a href="index.html" class="logo">
+    <img src="imagesjpg/logo.png" alt="Logo">
+    <div class="logo-text">Trang chủ</div>
+    </a>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="active"><b>Trang chủ</b></a></li>
+            <li><a href="index.html#gioithieu"><b>Giới thiệu</b></a></li>
+            <li><a href="Sukien.html"><b>Sự kiện</b></a></li>
+            <li><a href="Quyenloi.html"><b>Quyền lợi</b></a></li>
+            <li><a href="Diengia.html"><b>Diễn giả</b></a></li>
+            <li><a href="Dangky.html"><b>Đăng ký</b></a></li>
+            <li><a href="Danhsachdangky.html"><b>Danh sách Đăng ký</b></a></li>
+        </ul>
+    </nav>
+    
+</header>
+<!-- Các lớp bong bóng  -->
+    <div class="stars stars1"></div>
+    <div class="stars stars3"></div>
+
+    <!-- Video nền -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="imagesmp4/nen05.mp4" type="video/mp4">
+</video>
+<h3 class="title">Danh sách đã đăng ký</h3>
+
+<table id="tableList">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>SĐT</th>
+            <th>Lớp</th>
+            <th>Sự kiện</th>
+            <th>Ghi chú</th>
+            <th>Xóa</th>
+        </tr>
+    </thead>
+    <tbody id="list"></tbody>
+</table>
+
+<button onclick="clearAll()" class="btn-delete-all">
+    Xóa tất cả
+</button>
+<!-- JS -->
+<script src="js/Danhsachdangky.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quyền lợi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<body>
+            <!-- LOGO -->
+<header class="navbar">
+    <a href="index.html" class="logo">
+    <img src="imagesjpg/logo.png" alt="Logo">
+    <div class="logo-text">Trang chủ</div>
+    </a>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="active"><b>Trang chủ</b></a></li>
+            <li><a href="index.html#gioithieu"><b>Giới thiệu</b></a></li>
+            <li><a href="Sukien.html"><b>Sự kiện</b></a></li>
+            <li><a href="Quyenloi.html"><b>Quyền lợi</b></a></li>
+            <li><a href="Diengia.html"><b>Diễn giả</b></a></li>
+            <li><a href="Dangky.html"><b>Đăng ký</b></a></li>
+            <li><a href="Danhsachdangky.html"><b>Danh sách Đăng ký</b></a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+    <!-- Video nền -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="imagesmp4/nen02.mp4" type="video/mp4">
+    </video>
+
+    <!-- Các lớp bong bóng  -->
+    <div class="stars stars1"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+
+<section class="benefits">
+    <h1 class="benefits-title">Quyền lợi khi tham gia sự kiện</h1>
+
+
+<div class="filter-box">
+    
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Nhập tên sự kiện..."
+    >
+
+    <select id="benefitFilter">
+        <option value="">Tất cả quyền lợi</option>
+        <option value="gift">Có quà tặng</option>
+        <option value="point">Có điểm rèn luyện</option>
+    </select>
+
+    <select id="timeFilter">
+        <option value="">Tất cả thời gian</option>
+        <option value="morning">Buổi sáng</option>
+        <option value="afternoon">Buổi chiều</option>
+    </select>
+
+    <button id="resetBtn">Reset</button>
+</div>
+
+<!-- CHỖ NÀY BẮT BUỘC PHẢI CÓ -->
+<div id="eventList"></div>
+</section>
+<script src="js/script.js"></script>
+
+</body>
+</html>

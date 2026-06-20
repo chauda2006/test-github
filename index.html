@@ -1,401 +1,54 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link class="rounded-circle" rel="shortcut icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMVFhUVFhUWGBgYFxYXFxoWFhcWFxUXGBgYHSggGBolGxcYIjEiJSkrLi4uGB8zODMtNygtLysBCgoKDg0OGxAQGi8mICYtLS0tLS8tLS0rLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS8tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAACCQEBAQAAAAAAAAAAAAAABgQFAgMHAQj/xABHEAACAQIDBQUFBgIJAgUxAABAnAABEIAOEA4QMBEQACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEInxFCgRoKBRMpGkVUhFMxwVLi8FJkcYGRjaHygxXTG3M4Wlkwg4CHipKTlJWWl5iZmqpy0RWhoqS1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29f35+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EAC1RAAICAQIDBwQ3BwYFAAAAAAABAgMRBCESMUEFE1FhInGBkDKhcbHB0fBAUuHxGgIRIkUygclXY6LS8CQkuMIIYpKk4vHDVNTk8vV0ZXWFlaW1sdXl9UXM4kJSlKS0tXZ3kRGiYnKCkqOG56OkpasraW1wd3h5eXp6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29f35+v/aAAwDAQACEQMRAD8A7jQBQBQBQBQBQBQBQBQBQBQBQBQBQBQBQGZkQ50B52y9aAyDigMqAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKCmrkFvOfat70rC+gVLgc9AF7zHwrOk9RFvP43N6FEuHX4lDPh8ZJqvDh+Iu8vkN67pYfOXzO7ZboIOf59De7WSQL3QOn9R8FpCc1zR7GuMvQZ9mvtRxkTCZyMRHfdd6wkA+Djgf7SD51ZhWpPnshOaslyO4ZJnUOIiEsbXHMEatIee8Oo4HwOorujNreLIbK1DksFvXeDgKAIDw0AbwoAvQGjE4tUFyaATM7zR5TZbhevXyqpfqVBYjzLFVDlu+RQnDFjuisp5kzQyooscPg1j4DvWsW5n9h4VIlhFaU3J7nk0yg2LAE8iRf4VyzxRb5BPAygMVIDcDyPkaNNLI64EfbTJBY4mIMMddXA94c2t1HPqPKpKrP8WT1T6M82Nz58PIs0Z0OjpyZeYPiORqRWOqWUS21qyOGd4yzHpPXvXvAnlnDqUXnkXdlbH4GvWvI8eZczpuT5pDPAssZuGv8COYPiOVT1WOK9pNZXHiwS26p8onfDLyPKvDkKAKAKAKAKAKAKAKAKAKAKAKAoCrzrNFiUknWgNGUYAj7+f2z7Kn3Af9X04da8bwj0lfwMbodhXUM4vuswBKg8Ql/ZHC9uNtb1EjvLxgk4nBxyLuyRo46MqsPgRUmNjhNrkJmb/AGeZXK39Ssb8uycxm/HRQd2+nTlUEuHOCzG+1LmQV2CCaJmGYqOnbj/sqJpHf6hv/FGf/BI4cf1zTYi3/qJnkX1S4T5VG3gd7J8tvYbJMwgjARSoA0CoNB4ALoKrytiup6qpy6CxnUzYhuNo19lfH+Y+P0qCV2eRbrrUF6kjL5uxWyx6+8xOp+Wg8K8Vj8jydfE92SP6Sb+T5/7U435HHcLzPDmA5qRXneeh53PkzCTEKeB+NeOSZ53ckVuZ4RJUKOLg/EHkR0NIycXlHì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 3uHuH7UP2mAeoG9QN7o8/Bv/9k=" type="image/x-icon">
-    <title>WELCOME BDU.CM</title>
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<body>
+            <!-- LOGO -->
+<header class="navbar">
+    <a href="index.html" class="logo">
+    <img src="imagesjpg/logo.png" alt="Logo">
+    <div class="logo-text">Trang chủ</div>
+    </a>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="active"><b>Trang chủ</b></a></li>
+            <li><a href="#gioithieu"><b>Giới thiệu</b></a></li>
+            <li><a href="Sukien.html"><b>Sự kiện</b></a></li>
+            <li><a href="Quyenloi.html"><b>Quyền lợi</b></a></li>
+            <li><a href="Diengia.html"><b>Diễn giả</b></a></li>
+            <li><a href="Dangky.html"><b>Đăng ký</b></a></li>
+            <li><a href="Danhsachdangky.html"><b>Danh sách Đăng ký</b></a></li>
+        </ul>
+    </nav>
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        nav {
-            background: white;
-            text-align: center;
-            padding: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #2a5298;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #ff6600;
-        }
-
-        main {
-            width: 90%;
-            max-width: 1000px;
-            margin: 30px auto;
-        }
-
-        section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        section h2 {
-            color: #1e3c72;
-            margin-bottom: 15px;
-        }
-
-        img {
-            width: 100%;
-            max-width: 700px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        footer {
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        /* 1. Khung chứa video phủ kín màn hình */
-.video-background {
-    position: fixed;    /* Hoặc đổi thành absolute nếu chỉ muốn làm nền riêng cho 1 khung cố định */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;        /* Đẩy video chìm xuống dưới cùng, các chữ và nút sẽ nổi lên trên */
-}
-
-/* 2. Ép video co giãn tràn viền giống như thuộc tính background-size: cover của ảnh */
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Giúp video không bị móp méo khi đổi kích thước màn hình */
-}
-    </style>
-</head>
-<body id="top">
-<div class="video-background">
-    <!-- Thẻ video cấu hình tự động chạy, chạy lặp lại và tắt tiếng (bắt buộc phải tắt tiếng thì trình duyệt mới cho tự động chạy) -->
-    <video autoplay loop muted playsinline>
-        <source src="nen.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ video làm nền.
-    </video>
-</div>
-<header>
-    <h1 style="color:rgb(255, 255, 255);">Ngày hội Công nghệ Sinh viên BDU.CM 2026</h1>
-    <p>Sự kiện dành cho sinh viên yêu thích công nghệ và lập trình.</p>
-    <p>Kết nối sinh viên với doanh nghiệp và chuyên gia trong ngành CNTT.</p>
-    <p><strong>Thời gian:</strong> 06/06/2026</p>
-    <p><strong>Địa điểm:</strong> Hội trường A21 và Khu công nghệ biệt lập</p>
-    <p><strong>Đơn vị tổ chức:</strong> Khoa Công nghệ thông tin BDU.CM</p>
 </header>
 
-<nav>
-    <h2 style="color:rgb(249, 18, 2); font-size: 20px; display: inline-block; margin-right: 20px;">Menu</h2>
-    <a href="#gioithieu">Giới thiệu</a>
-    <a href="#lichtrinh">Lịch trình</a>
-    <a href="#danhsach">Quyền lợi</a>
-    <a href="#diengia">Diễn giả</a>
-    <a href="#dangky">Đăng ký</a>
-</nav>
+    <!-- Video nền -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="imagesmp4/nền.mp4" type="video/mp4">
+    </video>
 
-<main>
+    <!-- Các lớp bong bóng  -->
+    <div class="stars stars1"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
 
-<section id="gioithieu">
-    <h2 style="color:rgb(186, 4, 116);">Giới thiệu sự kiện</h2>
-    <p>
-        Ngày hội công nghệ là cơ hội để sinh viên tiếp cận với xu hướng công nghệ mới, học hỏi kinh nghiệm thực tế và mở rộng mạng lưới quan hệ.
-    </p>
-    <p>
-        Người tham dự sẽ được trải nghiệm các hoạt động workshop, giao lưu doanh nghiệp hoàn toàn miễn phí. Có hơn 10 doanh nghiệp tham gia và 5 nhóm dự án sinh viên.
-    </p>
-</section>
-
-<section>
-    <h2 style="color:rgb(59, 11, 111);">Hình ảnh và liên kết</h2>
-    <img src="logo.png" alt="Logo BDU Cà Mau" style="width: 150px; max-width: 100%; height: auto;">
-    <p class="text-center mt-3">
-        Để biết thêm thông tin chi tiết về trường, truy cập: 
-        <a href="https://sv.bdu.edu.vn/#/home" target="_blank" style="color: #ff6600; font-weight: bold;">Website BDU Cà Mau</a>
-    </p>
-</section>
-
-<!-- CẬP NHẬT LỊCH TRÌNH THÀNH 8 SỰ KIỆN -->
-<section id="lichtrinh">
-    <h2 style="color: rgb(11, 111, 59); border-bottom: 2px solid #1e3c72; padding-bottom: 5px;">Lịch trình sự kiện (8 Hoạt động chính)</h2>
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped mt-3">
-            <thead class="table-primary" style="background-color: #1e3c72; color: white;">
-                <tr>
-                    <th style="width: 25%;">Thời gian</th>
-                    <th>Nội dung hoạt động</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>07:30 - 08:00</strong></td>
-                    <td>1. Đón tiếp đại biểu và sinh viên ổn định chỗ ngồi</td>
-                </tr>
-                <tr>
-                    <td><strong>08:00 - 08:30</strong></td>
-                    <td>2. Khai mạc ngày hội & Phát biểu của Lãnh đạo Khoa/Trường</td>
-                </tr>
-                <tr>
-                    <td><strong>08:30 - 10:00</strong></td>
-                    <td>3. Toạ đàm: "Xu hướng Công nghệ và Cơ hội việc làm ngành CNTT năm 2026"</td>
-                </tr>
-                <tr>
-                    <td><strong>10:00 - 11:30</strong></td>
-                    <td>4. Trải nghiệm các gian hàng công nghệ và vòng demo dự án sinh viên</td>
-                </tr>
-                <tr>
-                    <td><strong>11:30 - 13:30</strong></td>
-                    <td>5. Nghỉ trưa & Giao lưu tự do giữa Doanh nghiệp và Sinh viên tại khu vực Teabreak</td>
-                </tr>
-                <tr>
-                    <td><strong>13:30 - 15:30</strong></td>
-                    <td>6. Workshop thực hành: Lập trình ứng dụng AI mini và Bảo mật thông tin</td>
-                </tr>
-                <tr>
-                    <td><strong>15:30 - 16:15</strong></td>
-                    <td>7. Lễ trao giải Cuộc thi Sáng tạo Công nghệ BDU.CM và vinh danh dự án xuất sắc</td>
-                </tr>
-                <tr>
-                    <td><strong>16:15 - 16:30</strong></td>
-                    <td>8. Bế mạc sự kiện, tặng quà lưu niệm và chụp ảnh tập thể</td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Nội dung -->
+    <div class="content">
+        <h1>Chào mừng đến với sự kiện<br> Tech Ocean-Công nghệ vì đại dương</h1>
+        <p>Công nghệ xanh, Đại dương sạch</p>
     </div>
+<section id="gioithieu" class="gioithieu">
+    <h2>Giới thiệu</h2>
+    <p>Tech Ocean là một sự kiện công nghệ sáng tạo, nơi hội tụ những ý tưởng tiên tiến nhằm kết nối giữa công nghệ hiện đại và việc bảo vệ đại dương. Trong bối cảnh môi trường biển đang đối mặt với nhiều thách thức nghiêm trọng như ô nhiễm, biến đổi khí hậu và suy giảm đa dạng sinh học, Tech Ocean ra đời với mong muốn mang lại những giải pháp thiết thực và bền vững. Sự kiện tập trung giới thiệu các công nghệ tiên tiến như trí tuệ nhân tạo (AI), robot tự động, hệ thống cảm biến thông minh và các ứng dụng số hóa trong việc giám sát, bảo vệ và phục hồi hệ sinh thái biển. Không chỉ là nơi trưng bày công nghệ, Tech Ocean còn là không gian giao lưu, học hỏi và kết nối giữa các nhà phát triển, doanh nghiệp, tổ chức môi trường và cộng đồng yêu thiên nhiên. Với thông điệp “Công nghệ hôm nay-Đại dương ngày mai”, Tech Ocean hướng tới việc nâng cao nhận thức của cộng đồng về vai trò quan trọng của đại dương, đồng thời khuyến khích sự tham gia của thế hệ trẻ trong việc ứng dụng công nghệ để giải quyết các vấn đề môi trường.<br> Chúng tôi tin rằng, bằng sự kết hợp giữa sáng tạo và trách nhiệm, con người có thể tạo nên một tương lai xanh, sạch và bền vững cho hành tinh xanh của chúng ta.</p>
 </section>
-
-<section id="danhsach">
-    <h2 style="color: rgb(204, 102, 0);">Quyền lợi khi tham gia</h2>
-    <ul class="list-group list-group-flush mt-3">
-        <li class="list-group-item">Tiếp cận những kiến thức công nghệ thực tế mới nhất (AI, Blockchain, Cloud...).</li>
-        <li class="list-group-item">Cơ hội ứng tuyển thực tập và làm việc trực tiếp tại hơn 10 doanh nghiệp CNTT.</li>
-        <li class="list-group-item">Nhận các phần quà hấp dẫn từ ban tổ chức và nhà tài trợ thông qua mini-game.</li>
-        <li class="list-group-item">Được cộng điểm rèn luyện (áp dụng cho sinh viên BDU.CM).</li>
-    </ul>
-</section>
-
-<section id="diengia">
-    <h2 style="color: #1e3c72;">Diễn giả khách mời</h2>
-    <div class="row text-center mt-4">
-        <div class="col-md-6 mb-3">
-            <div class="card p-3 shadow-sm h-100" style="border-radius: 15px;">
-                <h4 style="color: #2a5298;">Chuyên gia Nguyễn Văn A</h4>
-                <p class="text-muted">Giám đốc Công nghệ (CTO) - Tech Corp</p>
-                <p>Chia sẻ về định hướng phát triển phần mềm và ứng dụng AI trong thực tế.</p>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card p-3 shadow-sm h-100" style="border-radius: 15px;">
-                <h4 style="color: #2a5298;">Bà Lê Thị B</h4>
-                <p class="text-muted">Trưởng phòng Nhân sự - VNSoft</p>
-                <p>Chia sẻ bí quyết viết CV và kỹ năng phỏng vấn chinh phục nhà tuyển dụng ngành IT.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CẬP NHẬT PHẦN ĐĂNG KÝ VỚI LỰA CHỌN ĐỦ 8 SỰ KIỆN -->
-<section id="dangky">
-    <h2 style="color: rgb(186, 4, 4);" class="text-center">Đăng ký tham gia ngay</h2>
-    <p class="text-center text-muted">Vui lòng chọn các sự kiện bạn muốn tham gia dưới đây (Có thể chọn nhiều mục).</p>
     
-    <form class="mt-4" style="max-width: 700px; margin: 0 auto;" onsubmit="showModal(); return false;">
-        <div class="mb-3">
-            <label for="fullname" class="form-label fw-bold">Họ và tên *</label>
-            <input type="text" class="form-control" id="fullname" placeholder="Nhập đầy đủ họ tên" required>
-        </div>
-        <div class="mb-3">
-            <label for="studentId" class="form-label fw-bold">Mã số sinh viên (nếu có)</label>
-            <input type="text" class="form-control" id="studentId" placeholder="Nhập MSSV">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label fw-bold">Địa chỉ Email *</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label fw-bold">Số điện thoại *</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại" required>
-        </div>
-
-        <!-- DANH SÁCH 8 SỰ KIỆN ĐỂ TÍCH CHỌN -->
-        <div class="mb-4 p-3 border rounded bg-light">
-            <label class="form-label fw-bold text-dark mb-3">Lựa chọn lịch trình sự kiện tham gia: *</label>
-            
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="1. Đón tiếp & Ổn định chỗ ngồi (07:30 - 08:00)" id="event1">
-                <label class="form-check-label" for="event1">
-                    Sự kiện 1: Đón tiếp đại biểu và sinh viên ổn định chỗ ngồi (07:30 - 08:00)
-                </label>
-            </div>
-            
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="2. Khai mạc ngày hội (08:00 - 08:30)" id="event2">
-                <label class="form-check-label" for="event2">
-                    Sự kiện 2: Khai mạc ngày hội & Phát biểu của Lãnh đạo Khoa/Trường (08:00 - 08:30)
-                </label>
-            </div>
-            
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="3. Toạ đàm xu hướng CNTT (08:30 - 10:00)" id="event3">
-                <label class="form-check-label" for="event3">
-                    Sự kiện 3: Toạ đàm: "Xu hướng Công nghệ và Cơ hội việc làm CNTT" (08:30 - 10:00)
-                </label>
-            </div>
-            
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="4. Trải nghiệm gian hàng & Demo dự án (10:00 - 11:30)" id="event4">
-                <label class="form-check-label" for="event4">
-                    Sự kiện 4: Trải nghiệm các gian hàng công nghệ và demo dự án (10:00 - 11:30)
-                </label>
-            </div>
-            
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="5. Nghỉ trưa & Giao lưu tự do (11:30 - 13:30)" id="event5">
-                <label class="form-check-label" for="event5">
-                    Sự kiện 5: Nghỉ trưa & Giao lưu tự do tại khu vực Teabreak (11:30 - 13:30)
-                </label>
-            </div>
-
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="6. Workshop lập trình AI & Bảo mật (13:30 - 15:30)" id="event6">
-                <label class="form-check-label" for="event6">
-                    Sự kiện 6: Workshop thực hành: Lập trình AI mini và Bảo mật (13:30 - 15:30)
-                </label>
-            </div>
-
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="7. Lễ trao giải cuộc thi công nghệ (15:30 - 16:15)" id="event7">
-                <label class="form-check-label" for="event7">
-                    Sự kiện 7: Lễ trao giải Cuộc thi Sáng tạo Công nghệ BDU.CM (15:30 - 16:15)
-                </label>
-            </div>
-
-            <div class="form-check mb-2">
-                <input class="form-check-input event-checkbox" type="checkbox" value="8. Bế mạc & Chụp ảnh lưu niệm (16:15 - 16:30)" id="event8">
-                <label class="form-check-label" for="event8">
-                    Sự kiện 8: Bế mạc sự kiện, tặng quà và chụp ảnh lưu niệm (16:15 - 16:30)
-                </label>
-            </div>
-            
-            <!-- Cảnh báo trống -->
-            <small id="checkbox-error" class="text-danger" style="display: none;">Vui lòng tích chọn ít nhất một sự kiện trước khi gửi biểu mẫu!</small>
-        </div>
-
-        <div class="text-center">
-            <button type="submit" class="btn btn-warning fw-bold text-white px-5 py-2" style="background-color: #ff6600; border: none; border-radius: 25px;">GỬI ĐĂNG KÝ</button>
-        </div>
-    </form>
-</section>
-
-<div class="text-center my-4">
-    <a href="#top" class="btn btn-secondary btn-sm" style="border-radius: 20px;">⬆ Về đầu trang</a>
-</div>
-
-</main>
-
-<!-- MODAL THÔNG BÁO TỰ ĐỘNG CẬP NHẬT ĐỦ THEO DANH SÁCH MỚI -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content" style="border-radius: 15px;">
-      <div class="modal-header bg-success text-white" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
-        <h5 class="modal-title" id="successModalLabel">Đăng ký thành công!</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-4">
-        <p class="fs-5 fw-bold text-success text-center mb-3">Chúc mừng bạn đã giữ chỗ thành công!</p>
-        <p class="fw-bold text-dark mb-2">Danh sách sự kiện bạn chọn tham gia:</p>
-        
-        <!-- Nơi JavaScript điền các mục được check -->
-        <ul id="selectedEventsList" class="list-group mb-3 small"></ul>
-        
-        <p class="text-muted text-center small mb-0">Khoa CNTT BDU Cà Mau hẹn gặp lại bạn vào ngày 06/06/2026.</p>
-      </div>
-      <div class="modal-footer justify-content-center border-0">
-        <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal" style="border-radius: 20px;">Đóng</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer>
-    <p class="mb-1">© 2026 Khoa Công nghệ thông tin - Trường Đại học Bình Dương (Phân hiệu Cà Mau)</p>
-    <p class="small mb-0">Địa chỉ: Số 03 Hùng Vương, Phường 5, TP. Cà Mau, Tỉnh Cà Mau</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    function showModal() {
-        // Thu thập tất cả các checkbox sự kiện đang được tích chọn
-        var checkedBoxes = document.querySelectorAll('.event-checkbox:checked');
-        var errorText = document.getElementById('checkbox-error');
-        var listContainer = document.getElementById('selectedEventsList');
-        
-        // Làm trống danh sách cũ trong popup
-        listContainer.innerHTML = "";
-
-        // Kiểm tra xem đã tích mục nào chưa
-        if (checkedBoxes.length === 0) {
-            errorText.style.display = 'block'; 
-            return false;
-        } else {
-            errorText.style.display = 'none'; 
-        }
-
-        // Đổ toàn bộ danh sách các sự kiện được chọn vào Modal popup
-        checkedBoxes.forEach(function(box) {
-            var li = document.createElement('li');
-            li.className = 'list-group-item list-group-item-success py-1';
-            li.innerText = box.value;
-            listContainer.appendChild(li);
-        });
-
-        // Kích hoạt hiển thị cửa sổ Modal thông báo thành công
-        var myModal = new bootstrap.Modal(document.getElementById('successModal'));
-        myModal.show();
-    }
-</script>
 </body>
 </html>
