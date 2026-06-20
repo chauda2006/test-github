@@ -154,6 +154,17 @@ Có thể mở rộng:
 * Tối ưu trải nghiệm người dùng (UX/UI)
 
 ---
-link demon: https://github.com/chauda2006/test-github/edit/main/README.md
+## link demo: https://github.com/chauda2006/test-github/edit/main/README.md
+
 ảnh demo: <img width="1908" height="1036" alt="image" src="https://github.com/user-attachments/assets/e7ea77e0-4559-4c4e-be83-5a56e8c70a2a" />
+<img width="1907" height="1027" alt="image" src="https://github.com/user-attachments/assets/4d21dcf9-206c-4a37-b54c-be546815146c" />
+<img width="1913" height="1037" alt="image" src="https://github.com/user-attachments/assets/483beb58-dac4-4861-8ee2-e01cb1b5e926" />
+<img width="1913" height="1028" alt="image" src="https://github.com/user-attachments/assets/0e4300eb-badc-4bd2-b8e1-b35416916831" />
+<img width="1892" height="1036" alt="image" src="https://github.com/user-attachments/assets/7d9784bd-21d7-448f-ae2e-dbab4131da36" />
+<img width="1907" height="1025" alt="image" src="https://github.com/user-attachments/assets/5f4b535c-8722-40f0-beb6-0f5b8b48290f" />
+
+
+
+
+
 
