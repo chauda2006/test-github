@@ -27,7 +27,7 @@ Website giúp người dùng:
 
 ---
 
-### ℹ2. Thông tin sự kiện (Information)
+### 2. Thông tin sự kiện (Information)
 
 * Thời gian, địa điểm tổ chức
 * Nội dung chính của sự kiện
@@ -46,7 +46,7 @@ Website giúp người dùng:
 
 ---
 
-### 🎤 4. Diễn giả (Speakers)
+### 4. Diễn giả (Speakers)
 
 * Danh sách diễn giả
 * Hình ảnh và mô tả
