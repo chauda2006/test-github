@@ -676,159 +676,162 @@ html {
 
 
 
-
-
-
-
-
-
 /* phần đăng ký========================================================*/
 /* BODY */
-/* VIDEO NỀN */
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+/* ================= VIDEO NỀN ================= */
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
 }
 
-/* FORM WRAPPER */
-.event-form {
-    min-height: 110vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ================= FORM WRAPPER ================= */
+.event-form{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-/* RESET CHỈ TRONG FORM */
-.event-form * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ================= RESET ================= */
+.event-form *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* CONTAINER */
-.event-form .container {
-    max-width: 500px;
-    width: 100%;
+/* ================= CONTAINER ================= */
+/* Bootstrap Component 1: container */
+.event-form .container{
+    max-width:500px;
 }
 
-/* TITLE */
-.event-form .title {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-size: 26px;
-    text-shadow: 0 0 10px #00eaff;
+/* ================= TITLE ================= */
+.event-form .title{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+    font-size:26px;
+    text-shadow:0 0 10px #00eaff;
 }
 
-/* CARD */
-.event-form .card {
-    background: rgba(31, 24, 24, 0.877);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    border-radius: 15px;
-    position: relative;
-    color: white;
+/* ================= CARD ================= */
+/* Bootstrap Component 2: card */
+.event-form .card{
+    background:rgba(31,24,24,.87);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    position:relative;
+    color:white;
 }
 
-/* 🔥 VIỀN PHÁT SÁNG */
-.event-form .card::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 15px;
-    background: linear-gradient(45deg, #07cee0ec, #007bffaf, #00eaffb4);
-    z-index: -1;
-    filter: blur(8px);
+/* ===== VIỀN PHÁT SÁNG ===== */
+.event-form .card::before{
+    content:"";
+    position:absolute;
+    top:-2px;
+    left:-2px;
+    right:-2px;
+    bottom:-2px;
+    border-radius:15px;
+    background:linear-gradient(
+        45deg,
+        #07cee0ec,
+        #007bffaf,
+        #00eaffb4
+    );
+    z-index:-1;
+    filter:blur(8px);
 }
 
-/* LABEL */
-.event-form label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+/* ================= LABEL ================= */
+.event-form label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:5px;
 }
 
-/* INPUT */
-.event-form .form-control {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    margin-bottom: 10px;
-    background: rgba(255, 255, 255, 0.3);
-    color: #080606;
+/* ================= INPUT ================= */
+/* Bootstrap Component 3: form-control */
+.event-form .form-control{
+    background:rgba(255,255,255,.3);
+    color:#080606;
 }
 
 /* FOCUS */
-.event-form .form-control:focus {
-    border: 1px solid #00eaff;
-    box-shadow: 0 0 8px #00eaff;
+.event-form .form-control:focus{
+    border:1px solid #00eaff;
+    box-shadow:0 0 8px #00eaff;
 }
 
 /* PLACEHOLDER */
-.event-form ::placeholder {
-    color: #3b2424;
+.event-form ::placeholder{
+    color:#3b2424;
 }
 
-/* ERROR */
-.event-form .error {
-    color: #850101;
-    font-size: 13px;
-    margin-bottom: 10px;
+/* ================= ERROR ================= */
+.event-form .error{
+    color:#850101;
+    font-size:13px;
 }
 
-/* SUCCESS */
-.event-form .success-message {
-    display: none;
-    color: #ffffff;
-    font-weight: bold;
-    margin-top: 10px;
+/* ================= SUCCESS ================= */
+.event-form .success-message{
+    display:none;
+    color:white;
+    font-weight:bold;
+    margin-top:10px;
 }
 
-/* BUTTON */
-.event-form .btn {
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #0800ffbd, #007bff);
-    color: rgb(199, 199, 199);
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+/* ================= BUTTON ================= */
+/* Có dùng btn btn-info nhưng KHÔNG tính là Component */
+.event-form .btn{
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#0800ffbd,#007bff);
+    color:#c7c7c7;
+    transition:.3s;
 }
 
 /* HOVER */
-.event-form .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #0a5fe7;
+.event-form .btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #0a5fe7;
 }
 
-/* UTIL */
-.event-form .w-100 {
-    width: 100%;
-}
+/* ====================================================
+                BOOTSTRAP ĐANG SỬ DỤNG
+====================================================
 
-.event-form .mt-3 {
-    margin-top: 15px;
-}
+1. Bootstrap Grid
+- row
+- col-md-6
 
-.event-form .mb-3 {
-    margin-bottom: 15px;
-}
+2. Bootstrap Component 1
+- container
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .event-form .container {
-        padding: 0 10px;
+3. Bootstrap Component 2
+- card
+
+4. Bootstrap Component 3
+- form-control
+
+Các class hỗ trợ (Utility):
+- mb-3
+- mt-3
+- w-100
+- btn
+- btn-info
+
+==================================================== */
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:600px){
+    .event-form .container{
+        padding:0 10px;
     }
 }
-
