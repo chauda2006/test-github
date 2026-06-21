@@ -9,7 +9,7 @@ function loadData() {
             <td>${item.name}</td>
             <td>${item.email}</td>
             <td>${item.phone}</td>
-            <td>${item.lop}</td>
+            <td>${item.class}</td>
             <td>${item.event}</td>
             <td>${item.note}</td>
             <td>

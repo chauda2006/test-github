@@ -1,5 +1,9 @@
 # WEBSITE TÌM HIỂU & ĐĂNG KÝ SỰ KIỆN
 
+## thông tin sinh viên
+* Tên: Châu Tiến Đạt
+* MSSV: 24210501011
+* Lớp: 242101TH001
 ## Giới thiệu
 
 Đây là dự án xây dựng một website giới thiệu và đăng ký tham gia sự kiện bằng **HTML, CSS và JavaScript**.
@@ -23,7 +27,7 @@ Website giúp người dùng:
 
 ---
 
-### ℹ2. Thông tin sự kiện (Information)
+### 2. Thông tin sự kiện (Information)
 
 * Thời gian, địa điểm tổ chức
 * Nội dung chính của sự kiện
@@ -42,7 +46,7 @@ Website giúp người dùng:
 
 ---
 
-### 🎤 4. Diễn giả (Speakers)
+### 4. Diễn giả (Speakers)
 
 * Danh sách diễn giả
 * Hình ảnh và mô tả
@@ -138,7 +142,7 @@ Có thể mở rộng:
 
 ## Tác giả
 
-* Sinh viên thực hành HTML, CSS, JavaScript
+* Châu Tiến Đạt: Sinh viên thực hành HTML, CSS, JavaScript
 * Mục tiêu: xây dựng website sự kiện hoàn chỉnh
 
 ---
@@ -150,4 +154,17 @@ Có thể mở rộng:
 * Tối ưu trải nghiệm người dùng (UX/UI)
 
 ---
+## link demo: https://github.com/chauda2006/test-github/edit/main/README.md
+
+ảnh demo: <img width="1908" height="1036" alt="image" src="https://github.com/user-attachments/assets/e7ea77e0-4559-4c4e-be83-5a56e8c70a2a" />
+<img width="1907" height="1027" alt="image" src="https://github.com/user-attachments/assets/4d21dcf9-206c-4a37-b54c-be546815146c" />
+<img width="1913" height="1037" alt="image" src="https://github.com/user-attachments/assets/483beb58-dac4-4861-8ee2-e01cb1b5e926" />
+<img width="1913" height="1028" alt="image" src="https://github.com/user-attachments/assets/0e4300eb-badc-4bd2-b8e1-b35416916831" />
+<img width="1892" height="1036" alt="image" src="https://github.com/user-attachments/assets/7d9784bd-21d7-448f-ae2e-dbab4131da36" />
+<img width="1907" height="1025" alt="image" src="https://github.com/user-attachments/assets/5f4b535c-8722-40f0-beb6-0f5b8b48290f" />
+
+
+
+
+
 

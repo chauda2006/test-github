@@ -179,6 +179,61 @@ body::after{
         opacity:1;
     }
 }
+.footer{
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 9999;
+}
+.footer{
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    padding: 50px 30px;
+    margin-top: 80px;
+
+    border-top: 3px solid cyan;
+    position: relative;
+    z-index: 9999;
+}
+
+.footer-box{
+    width: 450px;
+    color: white;
+}
+
+.footer-box h2{
+    color: cyan;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px cyan;
+}
+
+.footer-box p{
+    margin: 18px 0;
+    font-size: 18px;
+}
+
+.footer-box a{
+    color: #00e5ff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-box a:hover{
+    color: white;
+    text-shadow: 0 0 10px cyan;
+    padding-left: 8px;
+}
 /* phần nọi dung trang chủ======================================*/
 .content,
 .section{
