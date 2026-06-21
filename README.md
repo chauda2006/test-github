@@ -156,12 +156,18 @@ Có thể mở rộng:
 ---
 ## link demo: https://github.com/chauda2006/test-github/edit/main/README.md
 
-ảnh demo: <img width="1908" height="1036" alt="image" src="https://github.com/user-attachments/assets/e7ea77e0-4559-4c4e-be83-5a56e8c70a2a" />
+## ảnh demo: 
+<img width="1908" height="1036" alt="image" src="https://github.com/user-attachments/assets/e7ea77e0-4559-4c4e-be83-5a56e8c70a2a" />
 <img width="1907" height="1027" alt="image" src="https://github.com/user-attachments/assets/4d21dcf9-206c-4a37-b54c-be546815146c" />
+<img width="1918" height="1041" alt="image" src="https://github.com/user-attachments/assets/a6e5a944-0f75-415a-9030-70406d793e45" />
 <img width="1913" height="1037" alt="image" src="https://github.com/user-attachments/assets/483beb58-dac4-4861-8ee2-e01cb1b5e926" />
 <img width="1913" height="1028" alt="image" src="https://github.com/user-attachments/assets/0e4300eb-badc-4bd2-b8e1-b35416916831" />
 <img width="1892" height="1036" alt="image" src="https://github.com/user-attachments/assets/7d9784bd-21d7-448f-ae2e-dbab4131da36" />
-<img width="1907" height="1025" alt="image" src="https://github.com/user-attachments/assets/5f4b535c-8722-40f0-beb6-0f5b8b48290f" />
+<img width="1882" height="1026" alt="image" src="https://github.com/user-attachments/assets/55313f3c-5d80-45a1-aba0-26ec5041cdbd" />
+<img width="1917" height="1037" alt="image" src="https://github.com/user-attachments/assets/90d075c4-0cce-44ce-9954-16c9478fa569" />
+
+
+
 
 
 
