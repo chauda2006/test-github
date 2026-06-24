@@ -15,7 +15,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: #073c52a5;
+    background: #073c52ae;/* tô màu menu*/
 
     display: flex;
     align-items: center;
@@ -34,35 +34,35 @@ body {
 /* phần logo===================================================== */
 .logo {
     display: flex;
-    flex-direction: column; /* 🔥 xếp dọc */
-    align-items: center;
-    text-decoration: none;
+    flex-direction: column; /* xếp dọc cho chữ " trang chủ" */
+    align-items: center;/* căn giữa xếp dọc cho chữ " trang chủ" */
+    text-decoration: none;/* xóa gạch chân thẻ liên kết <a> cho chữ " trang chủ" */
 }
 
 /* logo */
 .logo img {
-    width: 80px;
+    width: 80px;/* lớn nhỏ của*/
     height: auto;
 
-    filter: drop-shadow(0 0 10px #00d4ff);
+    filter: drop-shadow(0 0 10px #00d4ff);/* phát sáng logo*/
 }
 
 /* chữ dưới */
 .logo-text {
-    color: #ffffff;
-    font-size: 14px;
-    margin-top: 5px;
+    color: #ffffff;/* màu chữ trang chủ dưới logo*/
+    font-size: 14px;/* cỡ chữ trang chủ logo*/
+    margin-top: 5px;/*độ thấp chữ sov logo*/
 
-    text-shadow: 
+    text-shadow: /* phát sáng chữ trang chủ*/
         0 0 5px #00d4ff,
         0 0 10px #00d4ff;
 }
 .logo{
-    position: fixed;
+    position: fixed;/* ghim cố định vô màn hình ko cuốn theo khi kéo trang*/
     top: 20px;
     left: 20px;
 
-    z-index: 1000;
+    z-index: 1000;/* nằm trên cùng*/
 }
 
 
@@ -72,15 +72,15 @@ nav {
 }
 
 .menu {
-    list-style: none;
+    list-style: none;/* Xóa bỏ các dấu chấm tròn*/
     display: flex !important; /* ép luôn cho chắc */
-    gap: 20px;
+    gap: 20px;/*Tạo khoảng cách đều nhau 20px giữa các mục để chúng không dính sát vào nhau*/
 }
 
 .menu li a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
+    color: white;/* màu chue cho menu*/
+    text-decoration: none;/* xóa gạch chan*/
+    transition: 0.4s;/* nhanh chậm khi tiếp xúc v út kiểu đổi màu khi chạm vô*/
 }
 
 .menu li a:hover {/* màu khi chạm vô*/
@@ -94,66 +94,66 @@ nav {
 
 /* phần background của trang chủ===========================*/
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin:0;/* xóa kc ngoai*/
+    padding:0;/*x kc trong*/
+    box-sizing:border-box;/* cố định kích thước này kia của videp nền*/
 }
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior:smooth;/* tạo cuộn mượt hơn*/
 }
 
 #bg-video{
-    position:fixed;
+    position:fixed;/* ghim cố định */
     top:0;
     left:0;
 
-    width:100vw;
-    height:100vh;
+    width:100vw;/* ép kích thước chiều rộng 100*/
+    height:100vh;/* ép kích thước chiều caao*/
 
-    object-fit:cover;
+    object-fit:cover;/* giữ nguyên tỷ lệ vidoe*/
 
     z-index:-2;
 }
 
 body::after{
-    content:"";
+    content:"";/* Bắt buộc phải có để kích hoạt phần tử ảo này hoạt động (để trống nội dung bên trong*/
     position:fixed;
-    inset:0;
+    inset:0;/*Ghim cố định và kéo dãn lớp màng này phủ*/
 
-    background:rgba(2,2,2,.4);
+    background:rgba(2, 2, 2, 0.618);
 
     z-index:-1;
 }
 
 .stars{
-    position:fixed;
-    inset:0;
+    position:fixed;/* Ghim cố định khung này trên màn hình khi cuộn trang */
+    inset:0; /* Kéo dãn khung phủ kín cả 4 cạnh màn hình */
 
-    width:100%;
-    height:200%;
+    width:100%;/* Chiều rộng bằng 100% màn hình */
+    height:200%;/* Chiều cao gấp đôi màn hình (để chuẩn bị làm hiệu ứng cuộn hoặc trượt nền) */
 
-    background:url("https://www.transparenttextures.com/patterns/stardust.png");
+    background:url("https://www.transparenttextures.com/patterns/stardust.png");/* Chèn ảnh các bong bóng lặp lại làm nền */
 
     z-index:0;
 }
 
-.stars1{
+.stars1{/* Lớp bb: Sáng nhất, chuyển động nhanh nhất (nằm gần mắt người xem nhất) */
     animation:
-        moveStars 50s linear infinite,
-        twinkle 2s infinite alternate;
+        moveStars 50s linear infinite,/* Chạy hiệu ứng trượt "moveStars" trong 50 giây, tốc độ đều, lặp vô hạn */
+        twinkle 2s infinite alternate;/* Chạy hiệu ứng nhấp nháy "twinkle" trong 2 giây, lặp vô hạn, đổi chiều liên tục */
 }
 
 .stars2{
-    opacity:.5;
+    opacity:.5;/* Giảm độ sáng của lớp bb thứ hai xuống còn 50% để tạo độ xa */
 
     animation:
-        moveStars 100s linear infinite,
-        twinkle 3s infinite alternate;
+        moveStars 100s linear infinite,/* Hiệu ứng trượt chậm hơn (100 giây), tốc độ đều, lặp vô hạn */
+        twinkle 3s infinite alternate;/* Hiệu ứng nhấp nháy chậm hơn (3 giây), lặp vô hạn, đổi chiều liên tục */
 }
 
 .stars3{
-    opacity:.3;
+    opacity:.3;/* Giảm độ sáng của lớp sao thứ ba xuống còn 30% để tạo cảm giác rất xa */
 
     animation:
         moveStars 150s linear infinite,
@@ -162,18 +162,18 @@ body::after{
 
 @keyframes moveStars{
     from{
-        transform:translateY(0);
+        transform:translateY(0);/* Trạng thái bắt đầu: Các bb ở vị trí mặc định */
     }
 
     to{
-        transform:translateY(-2000px);
+        transform:translateY(-2000px);/* Trạng thái kết thúc: Đẩy toàn bộ lớp bb trượt thẳng lên trên 2000px */
     }
 }
 
 @keyframes twinkle{
     from{
         opacity:.3;
-    }
+    }  /* Trạng thái bắt đầu: Các ngôi sao hơi mờ đi (độ sáng 30%) */
 
     to{
         opacity:1;
@@ -181,13 +181,13 @@ body::after{
 }
 .footer{
     background: rgba(0,0,0,0.8);
-    color: white;
+    color: rgb(224, 207, 207);
     padding: 30px;
     margin-top: 50px;
 
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: flex;/* Kích hoạt chế độ Flexbox để dàn trang các khối con */
+    justify-content: space-around;/* Căn đều các khối con, tạo khoảng trống xung quanh chúng */
+    flex-wrap: wrap;/*Tự động xuống dòng các khối con nếu màn hình bị thu nhỏ (responsive) */
     position: relative;
     z-index: 9999;
 }
@@ -199,53 +199,54 @@ body::after{
     justify-content: space-around;
     flex-wrap: wrap;
 
-    padding: 50px 30px;
-    margin-top: 80px;
+    padding: 50px 30px;/* kc trong*/
+    margin-top: 80px;/*kc ngoài*/
 
-    border-top: 3px solid cyan;
+    border-top: 3px solid rgb(10, 208, 239);/*Tạo một đường viền dày 3px màu xanh neon chổ phàn địa chri email */
     
 }
 
 .footer-box{
-    width: 450px;
-    color: white;
+    width: 450px;/* dộ dài khung nè đen đen chổ phần địa chỉ*/
+    color: white;/* màu chữ bên trong của pphaanf địa chỉ này kia trường */
 }
 
 .footer-box h2{
-    color: cyan;
+    color: rgb(255, 255, 255);
     margin-bottom: 25px;
-    text-shadow: 0 0 10px cyan;
+    text-shadow: 0 0 10px rgb(0, 157, 255); /* Tạo hiệu ứng chữ phát sáng màu xanh neon rộng 10px */
+
 }
 
 .footer-box p{
-    margin: 18px 0;
+    margin: 18px 0;/* khoảng cách dòng của emial*/
     font-size: 18px;
 }
 
 .footer-box a{
-    color: #00e5ff;
+    color: #00bdde;/* chữ bên phần liên kết */
     text-decoration: none;
     transition: .3s;
 }
 
 .footer-box a:hover{
-    color: white;
+    color: white;/* màu khi nhấn vo*/
     text-shadow: 0 0 10px cyan;
     padding-left: 8px;
 }
 /* phần nọi dung trang chủ======================================*/
 .content,
 .section{
-    height:100vh;
+    height:100vh;/* căn cho đẹp chữ*/
 
     display:flex;
     justify-content:center;
-    align-items:center;
-    flex-direction:column;
+    align-items:center;/* CĂN GIỮA*/
+    flex-direction:column;/* xếp doc*/
 
     text-align:center;
 
-    color:rgb(247, 243, 243);
+    color:rgb(247, 243, 243);/* là chữ công nghệ xanh đại d sạch*/
     text-shadow: 
         0 0 10px #00d4ff,
         0 0 20px #00d4ff,
@@ -255,7 +256,7 @@ body::after{
     position:relative;
     z-index:1;
 }
-.content h1 {
+.content h1 {/* CHỮ TO CHỦ ĐỀ*/
     color: #fdffff;
 
     text-shadow: 
@@ -285,7 +286,7 @@ body::after{
 }
 
 .gioithieu h2 {
-    color: #efefef;
+    color: #efefef;/* CHŨ GIỚI THIỆU*/
     font-size: 40px;
 
     text-shadow: 
@@ -301,31 +302,31 @@ html {
 
 /* phần trang sự kiện==========================================*/
 
-body{
+body{/* toan bộ chữ trong trang này*/
     background:linear-gradient(135deg,#001d3d,#0077b6);
     color:rgb(255, 255, 255);
 }
 
 header{
-    text-align:center;
+    text-align:center;/* căn giữ tất cả */
      padding: 100px;
      margin:0;
-    text-shadow:
+    text-shadow:/* cho chữ chủ để phát sáng*/
         0 0 10px #00d4ff,
         0 0 20px #00d4ff,
         0 0 40px #00d4ff;
     z-index: 1000;
 }
-/*Responsive chuẩn*/
-.container{
+/*Responsive chuẩn====================================================================================*/
+.container{/* ảnh hưởng đến khung của các sụ kiện*/
     width:95%;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));/* Tự động tính số cột dựa trên màn hình: mỗi cột rộng ít nhất 280px và tự co giãn đều nhau */
     gap:20px;
 }
 
-.card{
+.card{/* màu khung của sụ kienj*/
     background:rgba(255, 255, 255, 0.1);
     padding:20px;
     border-radius:15px;
@@ -335,9 +336,9 @@ header{
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-10px);/* hiệu ứng nhất bổng lên khi chạm*/
 }
-.card h2{
+.card h2{/*màu chủ đề trong khung*/
     margin-bottom:20px;
     text-shadow: 
         0 0 10px #00d4ff,
@@ -350,18 +351,18 @@ header{
     margin:10px 0;
 }
 
-button{
+button{/* nút xem chi tiết*/
     margin-top:20px;
     padding:10px 20px;
     border:none;
     border-radius:20px;
     background:#00b4d8;
-    color:white;
+    color:rgb(241, 240, 240);
     cursor:pointer;
 }
 
 button:hover{
-    background:#48cae4;
+    background:#3205f9;/* màu khi nhấn voo*/
 }
 
 .modal{
@@ -391,7 +392,7 @@ button:hover{
 
 /* phần quyeen lơi===================================================*/
 /* Tiêu đề */
-.benefits-title{
+.benefits-title{/* chưu tieu đề*/
     text-align: center;
     color: rgba(255, 255, 255, 0.953);
     text-shadow: 
@@ -404,20 +405,20 @@ button:hover{
     margin-bottom: 40px;
 }
 
-/* Thanh lọc */
+/* màu khung và bo góc Thanh lọc */
 .filter-box{
     width: fit-content;
 
     margin: 0 auto 50px;
-
-    display: flex;
+ /* Đây là lệnh chính quyết định: Ép tất cả các ô con bên trong phải xếp thành hàng ngang */
+    display: flex;/* Kích hoạt Flexbox để xếp ô tìm kiếm và các nút nằm ngang */
     align-items: center;
     justify-content: center;
     gap: 15px;
 
     padding: 20px 30px;
 
-    background: rgba(255, 255, 255, 0.041); /* khung tìm kiếm*/
+    background: rgba(255, 255, 255, 0); /* khung tìm kiếm*/
     backdrop-filter: blur(15px);
 
     border-radius: 60px;
@@ -429,7 +430,7 @@ button:hover{
     z-index: 100;
 }
 
-/* Input và select */
+/* Input và select hiệu ứng khung này kia của 3 cái lọc nhỏ*/
 .filter-box input,
 .filter-box select{
     width: 200px;
@@ -462,26 +463,26 @@ button:hover{
 .benefits-section{
     padding: 40px;
 }
-/* Khu vực hiển thị kết quả JS */
+/* Khu vực hiển thị kết quả JS khi tương tác lọc */
 
 #eventList{
     width: 100%;
 
     display: grid;
-
+ /* Tự động tính số cột dựa trên màn hình: mỗi cột cố định độ rộng chính xác là 350px và tự động lấp đầy hàng ngang */
     grid-template-columns:
     repeat(auto-fit, minmax(350px, 350px));
 
-    justify-content: center;
+    justify-content: center;/* đẩy ngang heetsa*/
 
-    gap: 25px;
+    gap: 16px;/* khoảng cách các khung*/
 
     margin-top: 40px;
 }
 
 /* Card sự kiện */
 
-.event-card{
+.event-card{/* tại do dùng hình chèn vô nên khỏi dùng cũng đc */
     background: rgba(0, 0, 0, 0);
 
     backdrop-filter: blur(15px);
@@ -500,13 +501,13 @@ button:hover{
 }
 
 .event-card:hover{
-    transform: translateY(-5px);
-
+    transform: translateY(-5px);/* Hiệu ứng khi rê chuột: Nhấc nhẹ thẻ card lên trên 5px */
+ /* Tạo một vòng hào quang (đổ bóng phát sáng) màu xanh neon rộng 20px xung quanh thẻ card */
     box-shadow:
-    0 0 20px rgba(0,255,255,.25);
+    0 0 20px rgba(255, 255, 255, 0.834);
 }
 
-.event-card h3{
+.event-card h3{/* màu chữ trong khung của tiêu đè*/
     color: #1b0766;
     margin-bottom: 15px;
     font-size: 24px;
@@ -605,8 +606,8 @@ button:hover{
 .diengia img{
     width:650px;
     height:650px;
-    object-fit:cover;
-    border-radius:50%;
+    object-fit:cover;/* Cắt gọn ảnh tự động để lấp đầy khung hình mà không làm biến dạng hay méo hình ảnh */
+    border-radius:50%;/* Bo tròn tuyệt đối 4 góc biến khung ảnh vuông thành một hình tròn hoàn hảo */
 
     border:4px solid #00ffff;
 
@@ -614,7 +615,7 @@ button:hover{
         0 0 20px #00ffff,
         0 0 40px #00ffff,
         0 0 80px #00ffff;
-
+/* Áp dụng cuộn phim "phatsang" chạy liên tục vô hạn trong 1 giây, tự động đổi chiều mượt mà (alternate) */
     animation:phatsang 1s infinite alternate;
 }
 
@@ -630,13 +631,13 @@ button:hover{
 
 @keyframes phatsang{
     from{
-        box-shadow:0 0 20px #00ffff;
+        box-shadow:0 0 20px #eef0f0;
     }
     to{
         box-shadow:
             0 0 40px #00ffff,
             0 0 80px #00ffff,
-            0 0 120px #00ffff;
+            0 0 120px #4d4f4f;
     }
 }
 /* giới thiệu chung về diễn giả */
@@ -696,7 +697,7 @@ html {
 
 /* ================= FORM WRAPPER ================= */
 .event-form{
-    min-height:90vh;
+    min-height:90vh;/* độ cao khung đnagư ký*/
     display:flex;
     justify-content:center;
     align-items:center;
@@ -712,10 +713,10 @@ html {
 /* ================= CONTAINER ================= */
 /* Bootstrap Component 1: container */
 .event-form .container{
-    max-width:500px;
+    max-width:500px;/* chiều rộng khung tất cả*/
 }
 
-/* ================= TITLE ================= */
+/* ================= màu chữ tiêu đề ================= */
 .event-form .title{
     text-align:center;
     color:white;
@@ -726,7 +727,7 @@ html {
 
 /* ================= CARD ================= */
 /* Bootstrap Component 2: card */
-.event-form .card{
+.event-form .card{/* viền khung*/
     background:rgba(31,24,24,.87);
     backdrop-filter:blur(10px);
     border-radius:15px;
@@ -760,10 +761,10 @@ html {
     margin-bottom:5px;
 }
 
-/* ================= INPUT ================= */
+/* ================= INPUT khung trong khi h ================= */
 /* Bootstrap Component 3: form-control */
 .event-form .form-control{
-    background:rgba(255,255,255,.3);
+    background:rgba(137, 10, 10, 0.3);
     color:#080606;
 }
 
@@ -778,7 +779,7 @@ html {
     color:#3b2424;
 }
 
-/* ================= ERROR ================= */
+/* ================= màu ERROR ================= */
 .event-form .error{
     color:#850101;
     font-size:13px;
@@ -792,7 +793,7 @@ html {
     margin-top:10px;
 }
 
-/* ================= BUTTON ================= */
+/* =================  màu BUTTON ================= */
 /* Có dùng btn btn-info nhưng KHÔNG tính là Component */
 .event-form .btn{
     border:none;
@@ -802,10 +803,10 @@ html {
     transition:.3s;
 }
 
-/* HOVER */
+/* phát sáng khi nhấnHOVER */
 .event-form .btn:hover{
     transform:scale(1.05);
-    box-shadow:0 0 15px #0a5fe7;
+    box-shadow:0 0 15px #0ae0e7;
 }
 
 /* ====================================================
